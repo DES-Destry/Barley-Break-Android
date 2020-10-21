@@ -6,7 +6,7 @@ namespace BarleyBreak.Models
 {
     class ReferenceCollection<T> : IEnumerable<T>
     {
-        private T[] collection;
+        private readonly T[] collection;
 
         public int Count { get; private set; }
 
@@ -30,7 +30,7 @@ namespace BarleyBreak.Models
 
         public void Add(T item)
         {
-            if (Count >= collection.Length)
+            if (Count < collection.Length)
             {
                 collection[Count] = item;
                 Count++;

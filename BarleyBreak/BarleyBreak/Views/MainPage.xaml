@@ -5,9 +5,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              Title="Barley break"
-             ControlTemplate="{StaticResource ContentTemplate}"
              x:Class="BarleyBreak.Views.MainPage">
-    
+
+    <!--ControlTemplate="{StaticResource ContentTemplate}"-->
+
     <ContentPage.Resources>
         
         <ResourceDictionary>
@@ -17,7 +18,8 @@
                 <Setter Property="BackgroundColor" Value="DeepSkyBlue"/>
                 <Setter Property="TextColor" Value="White"/>
                 <Setter Property="FontSize" Value="40"/>
-                
+                <Setter Property="Command" Value="{Binding CellCommand}"/>
+
             </Style>
             
         </ResourceDictionary>
@@ -58,97 +60,97 @@
                     Grid.Column="0"
                     Style="{StaticResource CellButton}"
                     Text="{Binding Cell1.Value}"
-                    Command="{Binding Cell1Command}"/>
+                    CommandParameter="{Binding Cell1}"/>
 
                 <Button Grid.Row="0"
                     Grid.Column="1"
                     Style="{StaticResource CellButton}"
                     Text="{Binding Cell2.Value}"
-                    Command="{Binding Cell2Command}"/>
+                    CommandParameter="{Binding Cell2}"/>
 
                 <Button Grid.Row="0"
                     Grid.Column="2"
                     Style="{StaticResource CellButton}"
                     Text="{Binding Cell3.Value}"
-                    Command="{Binding Cell3Command}"/>
+                    CommandParameter="{Binding Cell3}"/>
 
                 <Button Grid.Row="0"
                     Grid.Column="3"
                     Style="{StaticResource CellButton}"
                     Text="{Binding Cell4.Value}"
-                    Command="{Binding Cell4Command}"/>
+                    CommandParameter="{Binding Cell4}"/>
 
                 <Button Grid.Row="1"
                     Grid.Column="0"
                     Style="{StaticResource CellButton}"
                     Text="{Binding Cell5.Value}"
-                    Command="{Binding Cell5Command}"/>
+                    CommandParameter="{Binding Cell5}"/>
 
                 <Button Grid.Row="1"
                     Grid.Column="1"
                     Style="{StaticResource CellButton}"
                     Text="{Binding Cell6.Value}"
-                    Command="{Binding Cell6Command}"/>
+                    CommandParameter="{Binding Cell6}"/>
 
                 <Button Grid.Row="1"
                     Grid.Column="2"
                     Style="{StaticResource CellButton}"
                     Text="{Binding Cell7.Value}"
-                    Command="{Binding Cell7Command}"/>
+                    CommandParameter="{Binding Cell7}"/>
 
                 <Button Grid.Row="1"
                     Grid.Column="3"
                     Style="{StaticResource CellButton}"
                     Text="{Binding Cell8.Value}"
-                    Command="{Binding Cell8Command}"/>
+                    CommandParameter="{Binding Cell8}"/>
 
                 <Button Grid.Row="2"
                     Grid.Column="0"
                     Style="{StaticResource CellButton}"
                     Text="{Binding Cell9.Value}"
-                    Command="{Binding Cell9Command}"/>
+                    CommandParameter="{Binding Cell9}"/>
 
                 <Button Grid.Row="2"
                     Grid.Column="1"
                     Style="{StaticResource CellButton}"
                     Text="{Binding Cell10.Value}"
-                    Command="{Binding Cell10Command}"/>
+                    CommandParameter="{Binding Cell10}"/>
 
                 <Button Grid.Row="2"
                     Grid.Column="2"
                     Style="{StaticResource CellButton}"
                     Text="{Binding Cell11.Value}"
-                    Command="{Binding Cell11Command}"/>
+                    CommandParameter="{Binding Cell11}"/>
 
                 <Button Grid.Row="2"
                     Grid.Column="3"
                     Style="{StaticResource CellButton}"
                     Text="{Binding Cell12.Value}"
-                    Command="{Binding Cell12Command}"/>
+                    CommandParameter="{Binding Cell12}"/>
 
                 <Button Grid.Row="3"
                     Grid.Column="0"
                     Style="{StaticResource CellButton}"
                     Text="{Binding Cell13.Value}"
-                    Command="{Binding Cell13Command}"/>
+                    CommandParameter="{Binding Cell13}"/>
 
                 <Button Grid.Row="3"
                     Grid.Column="1"
                     Style="{StaticResource CellButton}"
                     Text="{Binding Cell14.Value}"
-                    Command="{Binding Cell14Command}"/>
+                    CommandParameter="{Binding Cell14}"/>
 
                 <Button Grid.Row="3"
                     Grid.Column="2"
                     Style="{StaticResource CellButton}"
                     Text="{Binding Cell15.Value}"
-                    Command="{Binding Cell15Command}"/>
+                    CommandParameter="{Binding Cell15}"/>
 
                 <Button Grid.Row="3"
                     Grid.Column="3"
                     Style="{StaticResource CellButton}"
                     Text="{Binding Cell16.Value}"
-                    Command="{Binding Cell16Command}"/>
+                    CommandParameter="{Binding Cell16}"/>
 
             </Grid>
 

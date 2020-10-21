@@ -6,18 +6,42 @@
         public string Value { get; set; }
         public Variants Variants { get; set; }
 
-        public GroundCell(int place, string value, bool top, bool left, bool right, bool bottom)
+        public GroundCell(int place, string value)
         {
             this.Place = place;
             this.Value = value;
-            Variants = new Variants(top, left, right, bottom);
+            Variants = new Variants(false, false, false, false);
         }
 
         public GroundCell(int place, string value, Variants variants)
         {
             this.Place = place;
             this.Value = value;
-            this.Variants = variants;
+            this.Variants = variants; 
+        }
+
+        public GroundCell CanMoveUp()
+        {
+            this.Variants.HaveTopAction = true;
+            return this;
+        }
+
+        public GroundCell CanMoveLeft()
+        {
+            this.Variants.HaveLeftAction = true;
+            return this;
+        }
+
+        public GroundCell CanMoveRight()
+        {
+            this.Variants.HaveRightAction = true;
+            return this;
+        }
+
+        public GroundCell CanMoveDown()
+        {
+            this.Variants.HaveBottomAction = true;
+            return this;
         }
     }
 }
