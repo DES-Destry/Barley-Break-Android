@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BarleyBreak.App">
+    
+    <Application.Resources>
+        
+        <ResourceDictionary>
+            
+            <ControlTemplate x:Key="ContentTemplate">
+                
+                <Grid>
+                    <ContentPresenter/>
+
+                    <BoxView BackgroundColor="Black"
+                            Opacity="0.6"
+                             IsVisible="{TemplateBinding BindingContext.IsBusy}"/>
+
+                    <Frame VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           IsVisible="{TemplateBinding BindingContext.IsBusy}">
+
+                        <StackLayout>
+                            
+                            <Label Text="{TemplateBinding BindingContext.BusyTitle}"
+                                   TextColor="Black"
+                                   FontSize="Title"/>
+
+                            <Label Text="{TemplateBinding BindingContext.BusyProgressString}"
+                                   FontSize="Body"/>
+
+                            <ProgressBar ProgressColor="DeepSkyBlue"
+                                         Progress="{TemplateBinding BindingProgress.ProgressBar.Progress}"/>
+
+                        </StackLayout>
+                        
+                    </Frame>
+                    
+                </Grid>
+                
+            </ControlTemplate>
+            
+        </ResourceDictionary>
+        
+    </Application.Resources>
+    
+</Application>
